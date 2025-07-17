@@ -1,0 +1,8 @@
+%implements s1_b0_pt23j_BlockInstanceSetup "C"
+
+%function BlockInstanceSetup(block, system) Output
+%% Subsystems with iterators in IR:
+%% TLC Block Registration buffer:
+%<LibAddToCommonIncludes("MW_AnalogIn.h")>
+%% END  Block Registration buffer
+%endfunction

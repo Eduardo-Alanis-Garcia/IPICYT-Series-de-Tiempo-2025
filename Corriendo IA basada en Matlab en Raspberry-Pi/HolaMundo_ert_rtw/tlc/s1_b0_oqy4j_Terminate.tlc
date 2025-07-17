@@ -1,0 +1,22 @@
+%implements s1_b0_oqy4j_Terminate "C"
+
+%function Terminate(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* {S!d224}Terminate for MATLABSystem: '<Root>/Digital Output' */
+/*@>35986*/if (!/*@<35984*//*@>3842b*/HolaMundo_DW./*@>3877f*/obj.matlabCodegenIsDeleted) {
+    /*@>38431*/HolaMundo_DW./*@>38782*/obj./*@>3877c*/matlabCodegenIsDeleted/*@>35983*/ = /*@>36c63*/true;
+}
+/* {E!d224}End of Terminate for MATLABSystem: '<Root>/Digital Output' */
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function TerminateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Terminate(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 2, fcnProtoType)>
+%endfunction

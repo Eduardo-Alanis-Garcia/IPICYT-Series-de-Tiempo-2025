@@ -1,0 +1,37 @@
+%implements s1_b0_pt23j_Terminate "C"
+
+%function Terminate(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcTerminateFcnOfS1B1 = OpaqueTLCBlockFcn("Terminate", 1, 1, 0, 1, 0)
+%assign tlcCleanupRuntimeResourcesFcnOfS1B1 = OpaqueTLCBlockFcn("CleanupRuntimeResources", 1, 1, 0, 1, 1)
+/* {S!d50}Terminate for MATLABSystem: '<Root>/Analog Input' */
+/*@>3c30e*/if (!/*@<3c30c*//*@>3e80c*/ObtenerValores_DW./*@>3edb4*/obj.matlabCodegenIsDeleted) {
+    /*@>3e812*/ObtenerValores_DW./*@>3edb7*/obj./*@>3edab*/matlabCodegenIsDeleted/*@>3c30b*/ = /*@>3d67c*/true;
+    /*@>3c314*/if ((/*@>3e818*/ObtenerValores_DW./*@>3edba*/obj.isInitialized/*@>3c313*/ == /*@>3dbb0*/1L)/*@>3c331*/ && /*@>3e81e*/ObtenerValores_DW./*@>3edbd*/obj.isSetupComplete) {
+        /*@>3e824*/ObtenerValores_DW./*@>3edc0*/obj./*@>3edb1*/AnalogInDriverObj./*@>3edae*/MW_ANALOGIN_HANDLE/*@>3c320*/ = /*@>3e5d1*/MW_AnalogIn_GetHandle(/*@>3dbb7*/14UL);
+        /*@>3e5d3*/MW_AnalogIn_Close(/*@>3e82a*/ObtenerValores_DW./*@>3edc3*/obj.AnalogInDriverObj.MW_ANALOGIN_HANDLE);
+    }
+}
+/* {E!d50}End of Terminate for MATLABSystem: '<Root>/Analog Input' */
+%if !WHITE_SPACE(tlcTerminateFcnOfS1B1)
+
+/* {S!d52}Terminate for ToAsyncQueueBlock generated from: '<Root>/To Workspace' */
+%<SLibCG_DumpSSCode("/*@[3ea09*/",tlcTerminateFcnOfS1B1,"/*@]*/")>\
+%endif
+%if !WHITE_SPACE(tlcCleanupRuntimeResourcesFcnOfS1B1)
+/* {S!d54}CleanupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/To Workspace' */
+%<SLibCG_DumpSSCode("/*@[3ea0b*/",tlcCleanupRuntimeResourcesFcnOfS1B1,"/*@]*/")>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function TerminateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Terminate(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 1, fcnProtoType)>
+%endfunction

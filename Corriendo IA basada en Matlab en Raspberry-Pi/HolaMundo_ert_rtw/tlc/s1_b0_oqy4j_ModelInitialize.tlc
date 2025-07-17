@@ -1,0 +1,28 @@
+%implements s1_b0_oqy4j_ModelInitialize "C"
+
+%function ModelInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%<SLibCGIRDumpSystemUserCode(1, "Start", "Header")>\
+%<SLibCGIRDumpSystemUserCode(1, "Start", "Body")>\
+%<SLibCGIRDumpSystemUserCode(1, "Start", "Trailer")>\
+/* Start for MATLABSystem: '<Root>/Digital Output' */
+/*@>38437*/HolaMundo_DW./*@>387b9*/obj./*@>387b0*/matlabCodegenIsDeleted/*@>35a0b*/ = /*@>36c77*/false;
+/*@>3843d*/HolaMundo_DW./*@>387bc*/obj./*@>387b3*/isInitialized/*@>35a05*/ = /*@>374b2*/1L;
+/*@>3812f*/digitalIOSetup(/*@>374b5*/13, /*@>374b8*/1);
+/*@>38443*/HolaMundo_DW./*@>387bf*/obj./*@>387b6*/isSetupComplete/*@>35a02*/ = /*@>36c7c*/true;
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function ModelInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ModelInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 3, fcnProtoType)>
+%endfunction

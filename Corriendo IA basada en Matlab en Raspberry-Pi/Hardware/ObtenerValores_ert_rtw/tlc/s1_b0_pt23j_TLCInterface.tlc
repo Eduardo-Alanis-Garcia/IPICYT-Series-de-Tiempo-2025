@@ -1,0 +1,52 @@
+%implements s1_b0_pt23j_TLCInterface "C"
+
+%function getInputAddr_1_1_0_0_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<3eaef*//*@>3eae0*/ObtenerValores_B./*@>3eaf7*/AnalogInput"
+%endfunction
+
+%function getInput_1_1_0_0_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>3eb0f*/ObtenerValores_B./*@>3eb27*/AnalogInput"
+%endfunction
+
+%function getInputAddr_1_1_0_1_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<3eb61*//*@>3eb52*/ObtenerValores_B./*@>3eb69*/AnalogInput"
+%endfunction
+
+%function getInput_1_1_0_1_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>3eb81*/ObtenerValores_B./*@>3eb99*/AnalogInput"
+%endfunction
+
+%function getInputAddr_1_1_0_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<3ebd3*//*@>3ebc4*/ObtenerValores_B./*@>3ebdb*/AnalogInput"
+%endfunction
+
+%function getInput_1_1_0_1_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>3ebf3*/ObtenerValores_B./*@>3ec0b*/AnalogInput"
+%endfunction
+
+%function getInputAddr_1_1_0_2_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<3ec45*//*@>3ec36*/ObtenerValores_B./*@>3ec4d*/AnalogInput"
+%endfunction
+
+%function getInput_1_1_0_2_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>3ec65*/ObtenerValores_B./*@>3ec7d*/AnalogInput"
+%endfunction
+
+%function getInputAddr_1_1_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&/*@<3ecb7*//*@>3eca8*/ObtenerValores_B./*@>3ecbf*/AnalogInput"
+%endfunction
+
+%function getInput_1_1_0_2_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "/*@>3ecd7*/ObtenerValores_B./*@>3ecef*/AnalogInput"
+%endfunction
+

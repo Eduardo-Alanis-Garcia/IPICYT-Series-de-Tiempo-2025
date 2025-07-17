@@ -1,0 +1,38 @@
+%implements s1_b0_pt23j_ModelInitialize "C"
+
+%function ModelInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcSetupRuntimeResourcesFcnOfS1B1 = OpaqueTLCBlockFcn("SetupRuntimeResources", 1, 1, 0, 2, 0)
+%assign tlcStartFcnOfS1B1 = OpaqueTLCBlockFcn("Start", 1, 1, 0, 2, 1)
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%if !WHITE_SPACE(tlcSetupRuntimeResourcesFcnOfS1B1)
+/* SetupRuntimeResources for ToAsyncQueueBlock generated from: '<Root>/To Workspace' */
+%<SLibCG_DumpSSCode("/*@[3ea1a*/",tlcSetupRuntimeResourcesFcnOfS1B1,"/*@]*/")>\
+%endif
+%<SLibCGIRDumpSystemUserCode(1, "Start", "Header")>\
+%<SLibCGIRDumpSystemUserCode(1, "Start", "Body")>\
+%if !WHITE_SPACE(tlcStartFcnOfS1B1)
+/* Start for ToAsyncQueueBlock generated from: '<Root>/To Workspace' */
+%<SLibCG_DumpSSCode("/*@[3ea1e*/",tlcStartFcnOfS1B1,"/*@]*/")>\
+%endif
+%<SLibCGIRDumpSystemUserCode(1, "Start", "Trailer")>\
+/* Start for MATLABSystem: '<Root>/Analog Input' */
+/*@>3e830*/ObtenerValores_DW./*@>3ee56*/obj./*@>3ee53*/matlabCodegenIsDeleted/*@>3c3bd*/ = /*@>3d6dd*/false;
+/*@>3e836*/ObtenerValores_DW./*@>3ee59*/obj./*@>3ee50*/isInitialized/*@>3c3b7*/ = /*@>3dbd0*/1L;
+/*@>3e83c*/ObtenerValores_DW./*@>3ee5c*/obj./*@>3ee47*/AnalogInDriverObj./*@>3ee4a*/MW_ANALOGIN_HANDLE/*@>3c3af*/ = /*@>3e5e3*/MW_AnalogInSingle_Open(/*@>3dbd6*/14UL);
+/*@>3e842*/ObtenerValores_DW./*@>3ee5f*/obj./*@>3ee4d*/isSetupComplete/*@>3c3b4*/ = /*@>3d6d8*/true;
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function ModelInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ModelInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 2, fcnProtoType)>
+%endfunction

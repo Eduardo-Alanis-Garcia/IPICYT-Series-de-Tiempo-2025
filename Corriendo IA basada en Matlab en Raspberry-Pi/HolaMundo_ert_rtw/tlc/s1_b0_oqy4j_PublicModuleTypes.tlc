@@ -1,0 +1,30 @@
+%implements s1_b0_oqy4j_PublicModuleTypes "C"
+
+%function PublicModuleTypes(block) Output
+
+#ifndef struct_tag_bpMNyLZPCJBeBnOB7xlwFB
+#define struct_tag_bpMNyLZPCJBeBnOB7xlwFB
+struct tag_bpMNyLZPCJBeBnOB7xlwFB
+{
+    int16_T __dummy;
+};
+#endif /* struct_tag_bpMNyLZPCJBeBnOB7xlwFB */
+#ifndef typedef_b_arduinodriver_ArduinoDigita_T
+#define typedef_b_arduinodriver_ArduinoDigita_T
+typedef struct tag_bpMNyLZPCJBeBnOB7xlwFB b_arduinodriver_ArduinoDigita_T;
+#endif /* typedef_b_arduinodriver_ArduinoDigita_T */
+#ifndef struct_tag_ldqgYDWP5Rq6U8J4ptL7cG
+#define struct_tag_ldqgYDWP5Rq6U8J4ptL7cG
+struct tag_ldqgYDWP5Rq6U8J4ptL7cG
+{
+    boolean_T matlabCodegenIsDeleted;
+    int32_T isInitialized;
+    boolean_T isSetupComplete;
+    b_arduinodriver_ArduinoDigita_T DigitalIODriverObj;
+};
+#endif /* struct_tag_ldqgYDWP5Rq6U8J4ptL7cG */
+#ifndef typedef_codertarget_arduinobase_block_T
+#define typedef_codertarget_arduinobase_block_T
+typedef struct tag_ldqgYDWP5Rq6U8J4ptL7cG codertarget_arduinobase_block_T;
+#endif /* typedef_codertarget_arduinobase_block_T */
+%endfunction

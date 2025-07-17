@@ -1,0 +1,29 @@
+%implements s1_b0_pt23j_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcOutputsFcnOfS1B1 = OpaqueTLCBlockFcn("Outputs", 1, 1, 0, 0, 0)
+%<SLibGenerateExtModeOutput(system)>
+/* MATLABSystem: '<Root>/Analog Input' */
+/*@>3e800*/ObtenerValores_DW./*@>3ed29*/obj./*@>3ed20*/AnalogInDriverObj./*@>3ed23*/MW_ANALOGIN_HANDLE/*@>3c2be*/ = /*@>3e5cb*/MW_AnalogIn_GetHandle(/*@>3db35*/14UL);
+/* MATLABSystem: '<Root>/Analog Input' */
+/*@>3e5cd*/MW_AnalogInSingle_ReadResult(/*@>3e806*/ObtenerValores_DW./*@>3ed2c*/obj.AnalogInDriverObj.MW_ANALOGIN_HANDLE, &/*@>3e7d9*/ObtenerValores_B./*@>3ed26*/AnalogInput, /*@>3d649*/MW_ANALOGIN_UINT16);
+%if !WHITE_SPACE(tlcOutputsFcnOfS1B1)
+/* ToAsyncQueueBlock generated from: '<Root>/To Workspace' */
+%<SLibCG_DumpSSCode("/*@[3e9ff*/",tlcOutputsFcnOfS1B1,"/*@]*/")>\
+%endif
+%<SLibInsertSolverResetCode()>\
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 0, fcnProtoType)>
+%endfunction
